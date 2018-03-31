@@ -11,7 +11,8 @@ var users = require('./routes/users');
 //-------------------------------------------------------
 // 增加以下的require
 //-------------------------------------------------------
-var productList = require('./routes/productList');
+var bookrank = require('./routes/bookrank');
+var pointrank = require('./routes/pointrank');
 //-------------------------------------------------------
 
 var app = express();
@@ -31,7 +32,8 @@ app.use('/users', users);
 //-------------------------------------------------------
 // 增加以下的app.use()
 //-------------------------------------------------------
-app.use('/productList', productList);
+app.use('/bookrank', bookrank);
+app.use('/pointrank', pointrank);
 //-------------------------------------------------------
 
 // catch 404 and forward to error handler
