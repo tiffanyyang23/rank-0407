@@ -32,8 +32,8 @@ app.use('/users', users);
 //-------------------------------------------------------
 // 增加以下的app.use()
 //-------------------------------------------------------
-app.use('/bookrank', bookrank);
-app.use('/pointrank', pointrank);
+app.use('/bookrank',bookrank);
+app.use('/pointrank',pointrank);
 //-------------------------------------------------------
 
 // catch 404 and forward to error handler

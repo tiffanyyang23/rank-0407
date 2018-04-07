@@ -9,20 +9,21 @@ var pool = require('./lib/db.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    pool.query('select * from rankperson', function (error, results, fields) {
+   /* pool.query('select * from rankperson', function (error, results, fields) {
         if (error){
-            res.render('pointrank', {data:[]});
+            res.render('pointrank', {studentdata:[]});
         }else{
-            res.render('pointrank', {data:results});
+            res.render('pointrank', {studentdata:results});
         }
-		pool.query('SELECT * FROM student', function(err, results) {       
-			if (err) {
-				studentData=[];
-			}else{
-				studentData=results;
-			}
+	});*/
+	pool.query('select * from student', function(err, results, fields) {       
+		if (err) {
+			res.render('pointrank', {data:[]});
+		}else{
+			res.render('pointrank', {data:results});
+		}
 		
-		});		
+			
     });
 });
 

@@ -91,6 +91,8 @@
 						.css('transition', 'none');
 
 	});
+	
+	//login Button的js
 	// Get the modal
 	var modal = document.getElementById('login');
 	
@@ -100,28 +102,5 @@
 			modal.style.display = "none";
 		}
 	}
-	
-	$(function(){
-	　$(window).load(function(){
-	　　$(window).bind('scroll resize', function(){
-	　　var $this = $(this);
-	　　var $this_Top=$this.scrollTop();
-	  //var $this_Bottom=$this.scrollBottom();
-	
-	　　//當高度小於300時，區塊... 
-	　　if($this_Top < 100){
-	　　　$('#sidenav').stop().animate({top:"175px"});
-	　　　}
-	　　　　if($this_Top > 100){
-	　　　　$('#sidenav').stop().animate({top:"30px"});
-	　　　 }
-	
-		/*if($this_Bottom > 200){
-	　　　　$('#sidenav').stop().animate({top:"100px"});
-	　　　 }*/
-	　　}).scroll();
-	
-	　});
-	});
 
 })(jQuery);
